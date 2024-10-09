@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Submitted</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            background: #35424a;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+
+        header h1 {
+            margin: 0;
+            text-align: center;
+        }
+
+        .response-message {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .response-message h2 {
+            color: #35424a;
+        }
+
+        .response-message p {
+            font-size: 18px;
+        }
+
+        .btn-home {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #35424a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .btn-home:hover {
+            background-color: #e8491d;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Message Submitted</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="response-message">
+            <h2>Thank You, </h2>
+            <p>We have received your message:</p>
+           
+            <!-- Home Button -->
+            <a href="/" class="btn-home">Go to Home Page</a>
+        </div>
+    </div>
+</body>
+
+</html>

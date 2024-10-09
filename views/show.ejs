@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Post</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #1a1a2e;
+            --card-color: #16213e;
+            --text-color: #e94560;
+            --secondary-color: #0f3460;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--secondary-color);
+            padding: 20px 0;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--text-color);
+            font-size: 2.5rem;
+            text-transform: capitalize;
+        }
+
+        .post-card {
+            background-color: var(--card-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .post-header {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .username {
+            font-size: 2rem;
+            color: var(--text-color);
+            margin: 0;
+            text-transform: capitalize;
+        }
+
+        .post-content {
+            padding: 30px;
+        }
+
+        .content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            overflow-wrap: break-word;
+            color: #e0e0e0;
+        }
+
+        .meta-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+
+        .date {
+            display: flex;
+            align-items: center;
+        }
+
+        .date i {
+            margin-right: 5px;
+        }
+
+        .read-time {
+            display: flex;
+            align-items: center;
+        }
+
+        .read-time i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-file-alt"></i> Detailed Post</h1>
+    </header>
+
+    <div class="container">
+        <article class="post-card">
+            <div class="post-header">
+                <h2 class="username"><%= post.username %></h2>
+            </div>
+            <div class="post-content">
+                <p class="content"><%= post.content %></p>
+                <div class="meta-info">
+                    <span class="date">
+                        <i class="far fa-calendar-alt"></i>
+                        <%= new Date().toLocaleDateString() %>
+                    </span>
+                    <span class="read-time">
+                        <i class="far fa-clock"></i>
+                        <%= Math.ceil(post.content.split(' ').length / 200) %> min read
+                    </span>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
